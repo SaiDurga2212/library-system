@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library Management System</title>
+        <style>
+            header {
+                text-align: center;
+                color: white;
+                font-size: xxx-large;
+            }
+            body{
+                background-color: black;
+            }
+            form{
+                text-align: center;
+                color: white;
+                font-size: larger;
+            }
+            img {
+                display: block;
+                margin: 20px auto;
+                width: 200px;
+                height: auto;
+        }
+        div{
+            color: red;
+            display: none;
+        }
+        </style>
+    </head>
+    <body>
+        <header>Hi..!Welcome to Library Management System</header><br><br>
+        <img src="https://www.shutterstock.com/image-vector/funny-white-cat-book-sleeping-260nw-1857412138.jpg">
+        <form>
+            <label>UserName</label>
+            <input type="text" id="username" placeholder="Enter Your UserName" width="12px"><br><br>
+            <label>Gmail</label>
+            <input type="email" id="email" placeholder="Enter your mail id" width="12px"><br><br>
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your Password" width="12px"><br><br>
+            <button type="button" onclick="login()">Login</button>
+            <div class="warning" id="warning">Please provide your username and email.</div>
+        <script>
+            function login() {
+            // Add login functionality here
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var warning = document.getElementById('warning');
+            
+            if (!username || !email) {
+                warning.style.display = 'block';
+            } else {
+                warning.style.display = 'none';
+
+                alert("Login button clicked!");
+                window.location.href="homepage.html"
+            }
+        }
+        </script>
+        </form>
+        
+    </body>
+</html>
